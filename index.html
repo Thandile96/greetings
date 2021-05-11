@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="greet.css">
+</head>
+
+<body>
+    
+    <div class="greeting">
+      <h1>GREETING</h1>
+   </div>
+<br>
+<br>
+<div class="container">
+
+   <div class="nameInput">
+       <label for="name">Name</label>
+       <input type="text" placeholder="" name="name" class="names"> 
+   </div>
+
+   <div class="radio">
+   
+        <div class="input">
+            <input type="radio" name="languages" class="radioEnglish" value="english" style="margin-left: 45px; background-color: black"><br> 
+            <span class="label" style="margin-left: 30px">English</span>
+        </div>
+        <div class="input">
+            <input type="radio" name="languages" class="radioXhosa" value="IsiXhosa" style="margin-left: 45px"><br>
+            <span class="label" style="margin-left: 30px">IsiXhosa</span>
+        </div>
+        <div class="input">
+            <input type="radio" name="languages" class="radioSotho" value="Sesotho" style="margin-left: 45px"><br>
+            <span class="label" style="margin-left: 30px">Sesotho</span>
+        </div> 
+       
+
+        <button class="greetButton" type="button" name="button" style="width: 12em; height: 3em">Greet Me</button>
+        <p class="greetCount"></p> 
+   </div>
+
+</div> 
+<div class="greetings"></div>
+    
+<br>
+</body>
+
+<!-- <script src="greetFactory.js"></script> -->
+<script src="greet.js"></script>
+
+</html>
