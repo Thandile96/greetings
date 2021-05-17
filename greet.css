@@ -1,11 +1,11 @@
-
+html {
+width: 900px;
+}
 .greeting {
     border: 10px solid grey;
-    width: 70%;
+    width: 100%;
     text-align: center;
     margin-left: 16%;
-
-
 }
 
 .nameInput {
@@ -14,17 +14,21 @@
 }
 .radio {
     display: flex;
-    margin-top: 3em;
 }
 .radio .input {
     padding-left: 2em;
     margin-left: 20px;
+    margin-top: 3em;
+    padding-bottom: 2em;
+
 }
-.radio button {
-    margin-top: 8em;
+
+.buttons button {
+    margin-top: 10em;
     margin-left: -17em;
-    
+    margin-right: 18px;
 }
+
 .container {
     margin-left: 20em;
 }
@@ -32,14 +36,18 @@
 .greetings {
     font-size: 30px;
     text-align: center;
-    margin-top: 1em;
-    margin-right: 5em;
+    margin-top: 3.5em;
+    margin-right: 1.5em;
     
 }
 
 .greetCount{
-    margin-left: 5em;
+    margin-left: 10em;
     font-size: 350%;
     font-weight: bolder;
+    /* margin-top: -195px; */
+    margin-top: -300px;
 }
+
+
 
