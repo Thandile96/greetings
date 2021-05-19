@@ -1,21 +1,35 @@
 function greetings(){
 
-
-    function greetMe() {
-        if(radioButton.value === 'english') {
-            "Hello, " + namesElement.value;
+    function greetMe(language, name) {
+        if(language === 'english') {
+            return "Hello, " + name;
         }
 
-        else if(radioButton.value === 'IsiXhosa'){
-         "Molo, " + namesElement.value;
+        else if(language === 'IsiXhosa'){
+            return "Molo, " + name;
         }
     
-        else if(radioButton.value === 'Sesotho'){
-         "Lumela, " + namesElement.value;
+        else if(language === 'Sesotho'){
+            return "Lumela, " + name;
         }
     }
 
+    // function errorMessages(language, name){
+
+    //     if(name === ""){
+    //         return "Please enter name";
+    //     }
+
+    //     if(language === undefined){
+    //         return "Please select language";
+    //     }
+
+    // }
+
+
     return {
         greetMe,
+        
+        
     }
 }

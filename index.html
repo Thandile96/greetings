@@ -9,48 +9,41 @@
 <body>
     
     <div class="greeting">
-      <h1>GREETING</h1>
-   </div>
-<br>
-<br>
-<div class="container">
-
-    <h3>Please enter a name</h3>
-   <div class="nameInput" style="position: relative; top: -5px; left: -1px; margin: 0px;">
-       <label for="name">Name</label>
-       <input type="text" placeholder="" name="name" class="names"> 
-   </div>
- 
-   <h3>Select a language</h3>
-   <div class="radio" style="position: relative; top: -25px; left: -35px; margin: 0px;"> 
-        <div class="input">
-            <input type="radio" name="languages" class="radioEnglish" value="english" style="margin-left: 45px; background-color: black"><br> 
-            <span class="label" style="margin-left: 30px">English</span>
-        </div>
-        <div class="input">
-            <input type="radio" name="languages" class="radioXhosa" value="IsiXhosa" style="margin-left: 45px"><br>
-            <span class="label" style="margin-left: 30px">IsiXhosa</span>
-        </div>
-        <div class="input">
-            <input type="radio" name="languages" class="radioSotho" value="Sesotho" style="margin-left: 45px"><br>
-            <span class="label" style="margin-left: 30px">Sesotho</span>
-        </div> 
-   </div>
-
-    <div class="buttons" style="position: relative; top: -9em; left: 20.5em;">
-        <button class="greetButton" type="button" name="button" style="width: 8em; height: 3em;">Greet Me</button>
-        
-        <button class="resetButton" type="button" name="button" style="width: 8em; height: 3em">Reset</button>
+        <h1>GREETING</h1>
     </div>
-    <p class="greetCount"></p> 
-
-</div> 
-<div class="greetings"></div>
     
-<br>
+    <div class="container">
+        <div class="message"></div>
+        <h3>Please enter a name</h3>
+    <div class="nameInput" style="position: relative; top: -5px; left: -1px; margin: 0px;">
+        <label for="name">Name</label>
+        <input type="text" placeholder="" name="name" class="names"> 
+    </div>
+    
+    <h3 style="padding: 1em">Select a language</h3>
+    <div class="radio" style="position: relative; top: -25px; left: -35px;"> 
+            
+        <input type="radio" name="languages" class="radioEnglish" value="english" style="margin-left: 45px; background-color: black"><br> 
+        <span class="label" style="margin-left: 30px">English</span>
+        
+        <input type="radio" name="languages" class="radioXhosa" value="IsiXhosa" style="margin-left: 45px"><br>
+        <span class="label" style="margin-left: 30px">IsiXhosa</span>
+        
+        <input type="radio" name="languages" class="radioSotho" value="Sesotho" style="margin-left: 45px"><br>
+        <span class="label" style="margin-left: 30px">Sesotho</span>  
+    </div>
+
+            <button class="greetButton" type="button" name="button" style="width: 8em; height: 3em">Greet Me</button>
+            <button class="resetButton" type="button" name="button" style="width: 8em; height: 3em">Reset</button>
+
+    </div> 
+    <div class="greetCount"></div> 
+    <br>
+    <div class="greetings"></div>
+    
 </body>
 
-<!-- <script src="greetFactory.js"></script> -->
+<script src="greetFactory.js"></script>
 <script src="greet.js"></script>
 
 </html>

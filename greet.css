@@ -1,11 +1,9 @@
-html {
-width: 900px;
-}
+
 .greeting {
     border: 10px solid grey;
-    width: 100%;
+    width: 90%;
     text-align: center;
-    margin-left: 16%;
+    margin-left: 5%;
 }
 
 .nameInput {
@@ -20,7 +18,6 @@ width: 900px;
     margin-left: 20px;
     margin-top: 3em;
     padding-bottom: 2em;
-
 }
 
 .buttons button {
@@ -34,20 +31,32 @@ width: 900px;
 }
 
 .greetings {
-    font-size: 30px;
-    text-align: center;
-    margin-top: 3.5em;
-    margin-right: 1.5em;
-    
+    font-size: 26px;
+    /* text-align: center; */
+    padding-left: 12.5em;
+    /* border: 1px solid black; */  
 }
 
 .greetCount{
-    margin-left: 10em;
     font-size: 350%;
     font-weight: bolder;
-    /* margin-top: -195px; */
-    margin-top: -300px;
+    margin: -200px;
+    float: right;
+    padding-right: 14em;
 }
 
+@media(max-width: 700px){
+    body{
+        display: flex;
+    }
+        
+    
+}
 
+@media(min-width: 800px){
+    .container {
+        width: 30%;
+    }
+    
+}
 
