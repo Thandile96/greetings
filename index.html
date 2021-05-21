@@ -11,17 +11,17 @@
     <div class="greeting">
         <h1>GREETING</h1>
     </div>
-    
-    <div class="container">
-        <div class="message"></div>
-        <h3>Please enter a name</h3>
+    <p style="margin-left: 8em;">Please enter a name and select a language in order to be greeted in the language selected</p>
+   
+    <div class="message"></div>
+    <div class="container" style="margin-top: 4em">
+        <!-- <h3>Please enter a name</h3> -->
     <div class="nameInput" style="position: relative; top: -5px; left: -1px; margin: 0px;">
         <label for="name">Name</label>
         <input type="text" placeholder="" name="name" class="names"> 
     </div>
     
-    <h3 style="padding: 1em">Select a language</h3>
-    <div class="radio" style="position: relative; top: -25px; left: -35px;"> 
+    <div class="radio" style="position: relative; top: 4px; left: -20px; padding: 2em;"> 
             
         <input type="radio" name="languages" class="radioEnglish" value="english" style="margin-left: 45px; background-color: black"><br> 
         <span class="label" style="margin-left: 30px">English</span>
@@ -33,14 +33,14 @@
         <span class="label" style="margin-left: 30px">Sesotho</span>  
     </div>
 
-            <button class="greetButton" type="button" name="button" style="width: 8em; height: 3em">Greet Me</button>
-            <button class="resetButton" type="button" name="button" style="width: 8em; height: 3em">Reset</button>
+        <button class="greetButton" type="button" name="button" style="width: 8em; height: 3em">Greet Me</button>
+        <button class="resetButton" type="button" name="button" style="width: 8em; height: 3em">Reset</button>
 
     </div> 
-    <div class="greetCount"></div> 
+    <div class="greetCount">0</div> 
     <br>
     <div class="greetings"></div>
-    
+       
 </body>
 
 <script src="greetFactory.js"></script>
