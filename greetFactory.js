@@ -1,5 +1,7 @@
 function greetings(){
     
+    var theCounter = 0;
+    var
 
     function greetMe(language, name) {
         
@@ -8,7 +10,11 @@ function greetings(){
         var del = named.slice(1)
         var name = index + del
       
-        if(language === 'english') {
+        if (namesGreeted[namesElement.value] === undefined){
+            greetingsCounter++;
+        }
+
+        if(language === 'English') {
             return "Hello, " + name;
         }
 
@@ -22,8 +28,10 @@ function greetings(){
         
     }
 
+    
+
     return {
-        greetMe,
+        greetMe
         
     }
 }
