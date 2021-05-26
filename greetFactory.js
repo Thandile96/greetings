@@ -1,7 +1,17 @@
-function greetings(){
+function greetings(existNames){
     
-    var theCounter = 0;
-    var
+    var greetedNames = existNames || [];
+
+    function setName(name){
+
+        if(!greetedNames.includes(name)){
+            greetedNames.push(name)
+        }
+    }
+
+    function getNames(){
+        return greetedNames
+    }
 
     function greetMe(language, name) {
         
@@ -9,10 +19,6 @@ function greetings(){
         var index = named.charAt(0).toUpperCase();
         var del = named.slice(1)
         var name = index + del
-      
-        if (namesGreeted[namesElement.value] === undefined){
-            greetingsCounter++;
-        }
 
         if(language === 'English') {
             return "Hello, " + name;
@@ -25,13 +31,35 @@ function greetings(){
         else if(language === 'Sesotho'){
             return "Lumela, " + name;
         }
-        
+
+
+    }
+ 
+    function counter(){
+      return   greetedNames.length;
     }
 
+    function errorMsgs(radioButton, namesElement){
+        if(namesElement === "" &&  radioButton === null){
+            return "Please enter name and select language!";
+        }
+        else if(namesElement !== "" && !radioButton){
+            return "Please select language!";
+        }
+               
+        else if(namesElement === "" && radioButton !== null){
+            return "Please enter name!";
+        }        
+       
+    }
     
-
+    
     return {
-        greetMe
+        greetMe,
+        setName,
+        getNames,
+        counter,
+        errorMsgs
         
     }
 }

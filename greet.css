@@ -6,44 +6,24 @@
     margin-left: 5%;
 }
 
-.nameInput {
-    margin-top: 4em;
-    margin-left: 8em;
-}
-.radio {
+.block{
     display: flex;
-}
-.radio .input {
-    padding-left: 2em;
-    margin-left: 20px;
-    margin-top: 3em;
-    padding-bottom: 2em;
+    margin-top: 55px;
 }
 
-.buttons button {
-    margin-top: 10em;
-    margin-left: -17em;
-    margin-right: 18px;
+button {
+    margin-top: 4.5em;
 }
 
 .container {
-    margin-left: 20em;
+    margin-left: 25em;
 }
 
 .greetings {
     font-size: 26px;
-    /* text-align: center; */
-    padding-left: 12.5em;
-    /* border: 1px solid black; */  
+    padding-left: 12.5em; 
+    margin-left: 85px;
 }
-
-/* .greetCount{
-    font-size: 250%;
-    font-weight: bolder;
-    margin: -200px;
-    float: right;
-    padding-right: 16em;
-} */
 
 #counter{
     margin-right: 20%;
@@ -56,18 +36,29 @@
     padding: 2em;
 }
 
-@media(max-width: 700px){
-    body{
-        display: column;
+@media(max-width: 800px){
+    .greeting{
+        border: 10px solid grey;
         width: 100%;
+        text-align: center;
+        margin-left: 5%;
+        /* width: auto; 
+        font-size: 50px;
+        font-weight: bolder; */
     }
-        
     
+    .container{
+        flex-direction: column;
+        width: auto; 
+        margin: 10px 0;
+    } 
+
+        
 }
 
-@media(min-width: 800px){
+@media(min-width: 900px){
     .container {
-        width: 30%;
+        width: 100%;
     }
     
 }

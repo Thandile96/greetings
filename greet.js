@@ -5,83 +5,68 @@
     
     var greetCountElement = document.querySelector(".greetCount");
     var messageElement = document.querySelector(".message")
-    var namesGreeted = [];
-    var greetingsCounter = 0;
+    var existingNames;
     
-    var greetInstance = greetings();
 
     //set the counter to equal to the value in localStorage
 
-    if(localStorage['counter']){
-        greetingsCounter = localStorage['counter']; //equal to the value of localStorage counter
-        greetCountElement.innerHTML = greetingsCounter;
-
-    }
+    if(localStorage['name']){
+        existingNames = JSON.parse(localStorage['name']); //equal to the value of localStorage counter
     
-    function greet(){
-        var radioButton = document.querySelector("input[name='languages']:checked");
+    }
 
-        if(namesGreeted.includes(namesElement.value)){
-            greetingsElement.innerHTML = greetInstance.greetMe(radioButton.value, namesElement.value);
-            return;
-        }
-        
-        if(namesElement.value){
-            if(radioButton !== null){
-                greetingsElement.innerHTML = greetInstance.greetMe(radioButton.value, namesElement.value);
-                namesGreeted.push(namesElement.value)
-            }
-            else{
-                messageElement.innerHTML = ("Please select language!");
-                return;
-            }
-        }
-        else if(namesElement.value == '' && radioButton !== null){
-            messageElement.innerHTML =  ("Please enter name!");
-            return;
+    var greetInstance = greetings(existingNames);
+
+    greetCountElement.innerHTML = greetInstance.counter();
+
+    function errors(){
+
+        var checkedRadioButton = document.querySelector("input[name='languages']:checked");
+
+        if (namesElement.value !== "" && checkedRadioButton.value !== ""){
+            namesElement.value = "";            
         }
         else{
-            messageElement.innerHTML =  ("Please enter name and select language!");
-            return;
-        }
-    
-
-        if (namesGreeted[namesElement.value] === undefined){
-            greetingsCounter++;
-            
-            //update the DOM to display the counter
-            greetCountElement.innerHTML = greetingsCounter;
-            localStorage['counter'] = greetingsCounter;
-        }
-        namesElement.value = "";
+            messageElement.innerHTML = greetInstance.errorMsgs(checkedRadioButton, namesElement.value);
         
+            setTimeout(function(){
+                messageElement.innerHTML = "";
+                namesElement.value = "";
+            }, 1700)
+        }
+
+    }
+
+    function greet(){
+        var checkedRadioButton = document.querySelector("input[name='languages']:checked");
+        
+        if(namesElement.value){
+            if(checkedRadioButton){
+                greetingsElement.innerHTML = greetInstance.greetMe(checkedRadioButton.value, namesElement.value);
+                greetInstance.setName(namesElement.value)
+            }
+           
+        }
+        //update the DOM to display the counter
+        greetCountElement.innerHTML = greetInstance.counter();
+        localStorage['name'] = JSON.stringify(greetInstance.getNames()); 
         
     }
 
     function unCheck(){
-        var radioButton = document.querySelector("input[name='languages']:checked");
+        var checkedRadioButton = document.querySelector("input[name='languages']:checked");
 
-        radioButton.checked = false;
+        checkedRadioButton.checked = false;
 
     }
-    greetButtonElem.addEventListener('click',greet)
-    greetButtonElem.addEventListener('click',unCheck)
+    greetButtonElem.addEventListener('click', greet)
+    greetButtonElem.addEventListener('click', errors)
+    greetButtonElem.addEventListener('click', unCheck)
 
     function resetCounter(){
-        greetingsCounter = 0;
-        localStorage['counter'] = greetingsCounter;
-        greetCountElement.innerHTML = greetingsCounter;
+        
+        localStorage.clear()
+        location.reload()
 
     }
     resetButtonElem.addEventListener('click',resetCounter)
-    
-
-       
-
-    
-
-        
-          
-
-        
-
