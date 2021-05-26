@@ -28,22 +28,11 @@ describe("The greet function", function(){
     });
     describe("It should increment the counter when user is greeted", function(){
         it("the counter should increment when a user is greeted", function(){
-            let greetCounter = greetings();
             
-            greetCounter.greetMe("Lumela, Mel");
-            greetCounter.greetMe("Hello, Akho");
-            greetCounter.greetMe("Lumela, Hlumi");
-
-            assert.deepEqual(3, greetCounter.counter(['Mel, Akho, Hlumi']))
         });
         
 
      });
-
-    // describe("It should not return a greeting for a user that is greeted in lowercase", function(){
-
-    // });
-
 
 
 });
