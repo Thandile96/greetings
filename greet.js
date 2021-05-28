@@ -23,9 +23,6 @@ function errors(){
 
     var checkedRadioButton = document.querySelector("input[name='languages']:checked");
 
-    // if (namesElement.value !== "" && checkedRadioButton !== false){
-    //     namesElement.value = "";           
-    // }
     if(namesElement.value === "" &&  !checkedRadioButton){
         messageElement.innerHTML = greetInstance.errorMsgs(checkedRadioButton, namesElement.value);
         setTimeout(function(){
@@ -37,7 +34,6 @@ function errors(){
         messageElement.innerHTML = greetInstance.errorMsgs(checkedRadioButton, namesElement.value);
         setTimeout(function(){
             messageElement.innerHTML = "";
-            namesElement.value = "";
         }, 1700)
 
     }
@@ -47,7 +43,7 @@ function errors(){
             messageElement.innerHTML = "";
             namesElement.value = "";
         }, 1700)
-        checkedRadioButton.checked = false;
+        //checkedRadioButton.checked = false;
     }
 
 }

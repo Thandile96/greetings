@@ -39,15 +39,15 @@ function greetings(existNames){
       return   greetedNames.length;
     }
 
-    function errorMsgs(radioButton, namesElement){
-        if(namesElement === "" &&  radioButton === null){
+    function errorMsgs(language, name){
+        if(name === "" && language === null){
             return "Please enter name and select language!";
         }
-        else if(namesElement !== "" && !radioButton){
+        else if(name !== "" && !language){
             return "Please select language!";
         }
                
-        else if(namesElement === "" && radioButton !== null){
+        else if(name === "" && language !== null){
             return "Please enter name!";
         }        
        
