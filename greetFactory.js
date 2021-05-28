@@ -4,6 +4,11 @@ function greetings(existNames){
 
     function setName(name){
 
+        var named = name.toLowerCase()
+        var index = named.charAt(0).toUpperCase();
+        var del = named.slice(1)
+        var name = index + del
+
         if(!greetedNames.includes(name)){
             greetedNames.push(name)
         }
